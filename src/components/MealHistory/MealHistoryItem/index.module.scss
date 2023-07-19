@@ -1,0 +1,23 @@
+@import 'styles/_variables';
+
+.mealHistoryItem {
+  display: flex;
+  position: relative;
+  aspect-ratio: 1;
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .mealLogInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 18px;
+    color: $color-text-light;
+    background: $color-primary-300;
+    text-transform: capitalize;
+    font-size: 18px;
+  }
+}

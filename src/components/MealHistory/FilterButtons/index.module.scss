@@ -1,0 +1,64 @@
+@import 'styles/_variables';
+
+$button-size: 136px;
+$image-size: 56px;
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: (32px + ($button-size / 4)) 68px;
+
+  .btnTransitToInput {
+    border: none;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $bg-300-400;
+    position: relative;
+    width: $button-size;
+    height: ($button-size / 2);
+    color: $color-text-light;
+    font-size: 20px;
+    cursor: pointer;
+
+    &::before {
+      content: " ";
+      width: 0; 
+      height: 0;
+      border-bottom: ($button-size / 4) solid;
+      border-color: $color-primary-300;
+      border-left: ($button-size / 2) solid transparent;
+      border-right: ($button-size / 2) solid transparent;
+      position: absolute;
+      top: -($button-size / 4);
+    }
+
+    &::after {
+      content: " ";
+      width: 0; 
+      height: 0;
+      border-top: ($button-size / 4) solid;
+      border-color: $color-primary-400;
+      border-left: ($button-size / 2) solid transparent;
+      border-right: ($button-size / 2) solid transparent;
+      position: absolute;
+      bottom: -($button-size / 4);
+    }
+
+    .content {
+      position: absolute;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      z-index: 2;
+      text-transform: capitalize;
+
+      .image {
+        width: $image-size;
+        height: $image-size;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.btnBackToTop {
+  border: 3px solid transparent;
+  outline: none;
+  background: rgba($color: #FFF, $alpha: 0.25);
+  position: fixed;
+  bottom: 45%;
+  right: 48px;
+  cursor: pointer;
+  transition: all .2s ease-in;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+
+  &:hover {
+    border-color: rgba($color: #000000, $alpha: 0.15);
+  }
+}

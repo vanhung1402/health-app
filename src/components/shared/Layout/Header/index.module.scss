@@ -1,0 +1,101 @@
+@import 'styles/_variables';
+@import 'styles/_common';
+
+$btn-toggle-menu-size: 44px;
+
+.header {
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      height: 64px;
+    }
+
+    .navLinksWrapper {
+      display: flex;
+      align-items: center;
+
+      .navLinks {
+        display: flex;
+        
+        .navItem {
+          display: inline-flex;
+          align-items: center;
+          padding: 12px 32px 12px 12px;
+
+          &:hover {
+            font-weight: 600;
+          }
+
+          .navIconWrapper {
+            margin-right: 12px;
+            position: relative;
+
+            .countBadge {
+              position: absolute;
+              top: 0;
+              right: -8px;
+
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              
+              background: $color-primary-500;
+              border-radius: 50%;
+
+              width: 16px;
+              height: 16px;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .dropdownMenu {
+        position: relative;
+
+        .btnToggleMenu {
+          border: none;
+          outline: none;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: $btn-toggle-menu-size;
+          height: $btn-toggle-menu-size;
+          background-color: transparent;
+          margin-left: 32px;
+          cursor: pointer;
+        }
+
+        .dropdownMenuContent {
+          position: absolute;
+          right: 0;
+          top: $btn-toggle-menu-size;
+          background: $color-gray-400;
+          min-width: 248px;
+          padding-inline: 0;
+          margin-block: 0;
+          
+          li {
+            &:not(:first-child) {
+              border-top: 1px solid rgba($color: $color-dark-500, $alpha: 0.35);
+            }
+          }
+          
+          .menuItem {
+            transition: all .2s ease-in;
+            padding: 22px 22px 22px 32px;
+            display: block;
+
+
+            &:hover {
+              background: rgba($color: $color-dark-500, $alpha: 0.4);
+            }
+          }
+        }
+      }
+    }
+  }
+}

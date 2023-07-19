@@ -1,0 +1,39 @@
+@import 'variables';
+
+@mixin breakpoint-up($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints-up, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints-up, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  // default is xs
+  @else {
+    @media (max-width: ($sm - 0.1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-down($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints-down, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints-down, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  // default is xs
+  @else {
+    @media (min-width: $xxl) {
+      @content;
+    }
+  }
+}
+
+@mixin common-transition {
+  transition: all .2s ease-in;
+}

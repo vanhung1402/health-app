@@ -1,0 +1,36 @@
+$color-primary-300: #FFCC21;
+$color-primary-400: #FF963C;
+$color-primary-500: #EA6C00;
+$color-secondary-300: #EA6C00;
+$color-dark-600: #2E2E2E;
+$color-dark-500: #414141;
+$color-gray-400: #777777;
+$color-text-light: #FFF;
+$color-text-dark: #2E2E2E;
+
+$bg-300-400: linear-gradient(180deg, #FFCC21 0%, #FF963C 100%);
+$bg-light: linear-gradient(0deg, rgba(0, 0, 0, 0.360784), rgba(0, 0, 0, 0.360784)), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+
+$default-viewport-size: 1280px;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$breakpoints-up : (
+  'xxl': ( min-width: $xxl ),
+  'xl': ( min-width: $xl ),
+  'lg': ( min-width: $lg ),
+  'md': ( min-width: $md ),
+  'sm': ( min-width: $sm ),
+) !default;
+
+$breakpoints-down : (
+  'sm': ( max-width: $sm - 0.1px ),
+  'md': ( max-width: $md - 0.1px ),
+  'lg': ( max-width: $lg - 0.1px ),
+  'xl': ( max-width: $xl - 0.1px ),
+  'xxl': ( max-width: $xxl - 0.1px ),
+) !default;

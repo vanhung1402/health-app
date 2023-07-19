@@ -1,0 +1,12 @@
+@import 'styles/_variables'; 
+
+$container-width: 740px;
+$container-height: 312px;
+
+.container {
+  width: calc(100vw / $default-viewport-size) * $container-width;
+  height: calc(100vw / $default-viewport-size) * $container-height;
+  display: flex;
+  justify-content: center;
+  background: $color-dark-500;
+}
