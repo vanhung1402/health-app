@@ -1,4 +1,4 @@
-import BodySizeGraph from './BodySizeGraph';
+import BodySizeGraph from '../BodySizeGraph';
 import DateAchievementRate from './DateAchievementRate';
 
 import styles from './index.module.scss';
@@ -11,8 +11,8 @@ const dateAchievementRateData = {
 const HeroSection = () => {
   return (
     <section className={styles.container}>
-      <DateAchievementRate date={dateAchievementRateData.dataString} achievementRate={dateAchievementRateData.achievementRateNumber} />
-      <BodySizeGraph />
+      <DateAchievementRate className={styles.dateAchievementRateContainer} date={dateAchievementRateData.dataString} achievementRate={dateAchievementRateData.achievementRateNumber} />
+      <BodySizeGraph className={styles.bodySizeGraphContainer} />
     </section>
   );
 };

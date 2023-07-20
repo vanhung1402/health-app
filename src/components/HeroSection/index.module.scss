@@ -1,3 +1,30 @@
+@import 'styles/_variables'; 
+@import 'styles/_mixins';
+
+$body-size-graph-container-width: 740px;
+$body-size-graph-container-height: 312px;
+
 .container {
   display: flex;
+
+
+  @include breakpoint-down('md') {
+    flex-wrap: wrap;
+  }
+
+  .bodySizeGraphContainer {
+    width: calc(100vw / $default-viewport-size) * $body-size-graph-container-width;
+    height: calc(100vw / $default-viewport-size) * $body-size-graph-container-height;
+
+    @include breakpoint-down('md') {
+      width: 100%;
+      height: 60vw;
+    }
+  }
+
+  .dateAchievementRateContainer {
+    @include breakpoint-down('md') {
+      width: 100%;      
+    } 
+  }
 }

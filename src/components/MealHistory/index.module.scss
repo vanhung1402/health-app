@@ -1,20 +1,22 @@
 @import 'styles/_variables';
+@import 'styles/_mixins';
 
 .mealHistoryItemList {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 18px;
   margin-bottom: 32px;
+
+  @include breakpoint-down('lg') {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @include breakpoint-down('sm') {
+    grid-template-columns: 1fr;
+  }
 }
 
 .btnLoadMore {
   display: block;
-  background: $bg-300-400;
   margin: 0 auto 64px;
-  padding: 15px 64px;
-  color: $color-text-light;
-  border: none;
-  outline: none;
-  border-radius: 6px;
-  cursor: pointer;
 }

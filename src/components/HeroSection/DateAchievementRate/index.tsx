@@ -9,13 +9,14 @@ import 'react-circular-progressbar/dist/styles.css';
 type Props = {
   date: string; // Date string ISO format
   achievementRate: number;
+  className?: string;
 };
 
-const DateAchievementRate = ({ date, achievementRate }: Props) => {
+const DateAchievementRate = ({ date, achievementRate, className }: Props) => {
   const dateString = getMonthYearFromDate(new Date(date));
 
   return (
-    <div className={styles.container}>
+    <div className={classNames(styles.container, className)}>
       <img className={styles.bgImage} src="/images/d01.jpg" alt="Date - Achievement rate background" />
       <div className={classNames('english-text', styles.dateAchievementRateContainer)}>
         <CircularProgressbarWithChildren 

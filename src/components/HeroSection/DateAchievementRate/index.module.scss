@@ -1,4 +1,5 @@
 @import 'styles/_variables';
+@import 'styles/_mixins';
 
 $container-width: 540px;
 $container-height: 312px;
@@ -9,6 +10,10 @@ $date-achievement-rate-size: 181px;
   position: relative;
   width: calc(100vw / $default-viewport-size) * $container-width;
   height: calc(100vw / $default-viewport-size) * $container-height;
+
+  @include breakpoint-down('md') {
+    height: 60vw;
+  }
 
   .bgImage {
     width: 100%;

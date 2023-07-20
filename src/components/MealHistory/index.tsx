@@ -6,6 +6,7 @@ import MealType from "types/MealType";
 
 import styles from './index.module.scss';
 import MealHistoryItem from "./MealHistoryItem";
+import { Button } from "components/common/Button";
 
 const data: MealType[] = [
   { id: 1, type: MEAL_TYPES.MORNING, enjoyAt: '2023-07-19T14:01:59.366Z' },
@@ -66,7 +67,7 @@ const MealHistory = () => {
         ))}
       </div>
       {!isLastPage && (
-        <button className={styles.btnLoadMore} onClick={() => setCurrentPage(currentPage + 1)}>記録をもっと見る</button>
+        <Button className={styles.btnLoadMore} onClick={() => setCurrentPage(currentPage + 1)}>記録をもっと見る</Button>
       )}
     </section>
   );

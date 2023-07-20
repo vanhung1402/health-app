@@ -10,6 +10,7 @@ import { Line } from 'react-chartjs-2';
 import { faker } from '@faker-js/faker';
 
 import styles from './index.module.scss';
+import classNames from 'classnames';
 
 ChartJS.register(
   CategoryScale,
@@ -52,9 +53,13 @@ export const data = {
   ],
 };
 
-const BodySizeGraph = () => {
+type Props = {
+  className?: string;
+}
+
+const BodySizeGraph = ({ className }: Props) => {
   return (
-    <div className={styles.container}>
+    <div className={classNames(styles.container, className)}>
       <Line options={options} data={data} />
     </div>
   );

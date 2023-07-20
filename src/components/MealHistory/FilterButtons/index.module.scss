@@ -1,12 +1,24 @@
 @import 'styles/_variables';
+@import 'styles/_mixins';
 
 $button-size: 136px;
 $image-size: 56px;
 
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   justify-content: space-around;
   padding: (32px + ($button-size / 4)) 68px;
+
+  @include breakpoint-down('lg') {
+    grid-template-columns: 1fr 1fr;
+    gap: 92px 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  @include breakpoint-down('sm') {
+    grid-template-columns: 1fr;
+  }
 
   .btnTransitToInput {
     border: none;
@@ -21,6 +33,7 @@ $image-size: 56px;
     color: $color-text-light;
     font-size: 20px;
     cursor: pointer;
+    margin: 0 auto;
 
     &::before {
       content: " ";

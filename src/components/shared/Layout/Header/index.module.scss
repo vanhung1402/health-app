@@ -1,5 +1,6 @@
 @import 'styles/_variables';
 @import 'styles/_common';
+@import 'styles/_mixins';
 
 $btn-toggle-menu-size: 44px;
 
@@ -9,6 +10,10 @@ $btn-toggle-menu-size: 44px;
     align-items: center;
     justify-content: space-between;
 
+    @include breakpoint-down('md') {
+      flex-direction: column;
+    }
+
     .logo {
       height: 64px;
     }
@@ -16,6 +21,10 @@ $btn-toggle-menu-size: 44px;
     .navLinksWrapper {
       display: flex;
       align-items: center;
+
+      @include breakpoint-down('md') {
+        flex-direction: column;
+      }
 
       .navLinks {
         display: flex;
@@ -67,6 +76,10 @@ $btn-toggle-menu-size: 44px;
           background-color: transparent;
           margin-left: 32px;
           cursor: pointer;
+
+          @include breakpoint-down('md') {
+            margin-left: 0;
+          }
         }
 
         .dropdownMenuContent {
@@ -77,6 +90,12 @@ $btn-toggle-menu-size: 44px;
           min-width: 248px;
           padding-inline: 0;
           margin-block: 0;
+          z-index: 10;
+
+
+          @include breakpoint-down('md') {
+            right: -104px;
+          }
           
           li {
             &:not(:first-child) {
