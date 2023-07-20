@@ -1,0 +1,50 @@
+@import 'styles/_variables';
+@import 'styles/_mixins';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+  margin: 32px auto;
+
+  @include breakpoint-down('lg') {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  @include breakpoint-down('sm') {
+    grid-template-columns: 1fr;
+  }
+
+  .recommenItem {
+    padding: 12px 0;
+    gap: 8px;
+    background: $color-text-dark;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    .title,
+    .separateBorder,
+    .desc {
+      margin: 0;
+    }
+
+    .title {
+      display: inline-block;
+      max-width: min-content;
+      text-transform: uppercase;
+      color: $color-primary-300;
+      font-size: 20px;
+      text-align: center;
+    }
+    .separateBorder {
+      border-top: 1px solid $color-text-light;
+      width: 30%;
+    }
+    .desc {
+      color: $color-text-light;
+    }
+  }
+}
