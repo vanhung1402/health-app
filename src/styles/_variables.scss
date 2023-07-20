@@ -19,6 +19,12 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
 
+$max-sm: 540px;
+$max-md: 720px;
+$max-lg: 960px;
+$max-xl: 1140px;
+$max-xxl: 1320px;
+
 $breakpoints-up : (
   'xxl': ( min-width: $xxl ),
   'xl': ( min-width: $xl ),

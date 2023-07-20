@@ -1,0 +1,25 @@
+@import 'styles/_variables';
+
+.container {
+  padding: 18px 24px;
+  background: $color-dark-500;
+  color: $color-text-light;
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    .title {
+      text-transform: uppercase;
+
+      display: inline-block;
+      max-width: min-content;
+
+      min-width: 96px;
+    }
+
+    .dateString {
+      font-size: 20px;
+    }
+  }
+}

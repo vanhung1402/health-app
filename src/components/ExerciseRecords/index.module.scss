@@ -1,0 +1,53 @@
+@import 'styles/_variables';
+@import 'styles/_mixins';
+
+.container {
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  max-height: 212px;
+  overflow-y: scroll;
+
+  @include breakpoint-down('lg') {
+    grid-template-columns: auto;
+  }
+
+  /* Width */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $color-gray-400;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-primary-300;
+  }
+
+  .recordItem {
+    border-bottom: 1px solid rgba($color: #FFF, $alpha: 0.2);
+    padding: 4px 0;
+    margin-right: 24px;
+
+    .titleWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .title {
+      color: $color-text-light;
+    }
+    .minutes, .kcal {
+      color: $color-primary-300;
+    }
+    .minutes {
+      font-size: 14px;
+    }
+    .kcal {
+      font-size: 12px;
+    }
+  }
+}
